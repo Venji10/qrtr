@@ -6,11 +6,10 @@ proj-version := $(proj-major).$(proj-minor)
 CFLAGS := -Wall -g
 LDFLAGS :=
 
-prefix := /usr/local
+prefix := /usr
 bindir := $(prefix)/bin
 libdir := $(prefix)/lib
 includedir := $(prefix)/include
-servicedir := $(prefix)/lib/systemd/system
 
 ifneq ($(CROSS_COMPILE),)
 CC := $(CROSS_COMPILE)gcc
@@ -118,17 +117,6 @@ $(DESTDIR)$(libdir)/$1.$(proj-version): $1
 	@ln -sf $1.$(proj-major) $(DESTDIR)$(libdir)/$1
 
 all-install += $(DESTDIR)$(libdir)/$1.$(proj-version)
-endef
-
-define add-systemd-service-target
-$1: $1.in
-	sed 's+QRTR_NS_PATH+$(bindir)+g' $$< > $$@
-
-$(DESTDIR)$(servicedir)/$1: $1
-	@echo "INSTALL	$$<"
-	@install -D -m 644 $$< $$@
-
-all-install += $(DESTDIR)$(servicedir)/$1
 endef
 
 $(foreach v,$(filter-out %.so,$(targets)),$(eval $(call add-bin-target,$v)))
