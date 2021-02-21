@@ -126,6 +126,7 @@ $(eval $(call add-systemd-service-target,qrtr-ns.service))
 
 install: $(all-install)
 	@install -D -m 755 qrtr-ns.initd $(DESTDIR)etc/init.d/qrtr-ns
+	@install -D -m 644 LICENSE $(DESTDIR)usr/share/licenses/$(OUT)/COPYING
 
 clean:
 	@echo CLEAN
