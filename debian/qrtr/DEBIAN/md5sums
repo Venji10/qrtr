@@ -1,0 +1,7 @@
+13379de6faa1b3ac0b2eea50a8025b0f  usr/bin/qrtr-cfg
+c5a04191a4ef816aebe420e908f5bc89  usr/bin/qrtr-lookup
+07fede6bb3eb6fc39a188c9ebafc4f93  usr/bin/qrtr-ns
+0cc318ebcf0efdd5663ede0e56325bd8  usr/include/libqrtr.h
+361c57ab3e063862efda6e448c842544  usr/lib/libqrtr.so.1.0
+e2e1743e431fb17ab5749295e7072b82  usr/share/doc/qrtr/changelog.Debian.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/qrtr/copyright

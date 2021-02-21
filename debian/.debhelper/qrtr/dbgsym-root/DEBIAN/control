@@ -1,0 +1,12 @@
+Package: qrtr-dbgsym
+Source: qrtr
+Version: 0.3-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: venji10 <venji10@riseup.net>
+Installed-Size: 81
+Depends: qrtr (= 0.3-1)
+Section: debug
+Priority: optional
+Description: debug symbols for qrtr
+Build-Ids: 1e211b1be3d33b948813d2208e9af22d75d77958 2d40ff55d5842f305ab36724235845d3db59160d 7680378ddbb59dd512fa010c6a78d5ea7cb627b2 8c57fa9be118dbb4ea29a159a34f15cbac978586

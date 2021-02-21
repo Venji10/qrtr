@@ -125,6 +125,7 @@ $(eval $(call add-inc-target,lib,libqrtr.h))
 $(eval $(call add-systemd-service-target,qrtr-ns.service))
 
 install: $(all-install)
+	@install -D -m 755 qrtr-ns.initd $(DESTDIR)etc/init.d/qrtr-ns
 
 clean:
 	@echo CLEAN
